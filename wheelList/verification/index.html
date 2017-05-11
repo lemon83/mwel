@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>验证码</title>
+    <link rel="stylesheet" href="verification1.css" media="screen" title="no title">
+    <style>
+        button.submit{
+            border-color:#72C47C;
+            background-color: #72C47C;
+            color:#fff;
+            -webkit-border-radius:4px;
+            -moz-border-radius:4px;
+            border-radius:4px;
+            padding: 0 15px;
+            min-width:70px;
+            text-align: center;
+            outline:none;
+            height: 40px;
+            cusor:pointer;
+        }
+
+
+    </style>
+</head>
+<body>
+<button type="button" class="submit">提交</button>
+<div class="v-group v-hide">
+    <div class="v-bg"></div>
+    <div class="v-box">
+        <div class="v-header">
+            <div class="v-ready">请完成下方验证</div>
+            <div class="v-closed"></div>
+        </div>
+        <div class="v-body">
+            <div class="v-widget">
+                <div class="w-top"></div>
+                <div class="w-box">
+                    <div class="w-show">
+                        <div class="w-start"></div>
+                        <div class="w-end"></div>
+                    </div>
+                </div>
+                <div class="w-bottom"></div>
+            </div>
+            <div class="v-slide">
+                <div class="s-control"></div>
+                <div class="s-text">按住滑块完成拼图</div>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="verification.js"></script>
+<script type="text/javascript">
+    document.querySelector('.submit').addEventListener('click', function () {
+        //执行函数
+        var a = new Verification()
+        a.start()
+    })
+</script>
+</body>
+</html>
